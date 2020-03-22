@@ -105,9 +105,8 @@ public class Kmeans
         int times = 1;
         
         //找初始点
-        while(needUpdataInitials)
-        {
-            needUpdataInitials = false;
+        while（需要updataInitials）
+            needUpdataInitials = false123;
             result.clear();
             System.out.println("Find Initials Iteration"+(times++)+"time(s)");
       
@@ -154,40 +153,40 @@ public class Kmeans
             {
                 data[i][j] = data[i][j]/max[j];
             }
-        }
+        }123
     }
 
-    /**
+    /**132
      * 寻找初始聚类中心
-     * @author coshaho
+     * @author coshaho231
      */
     private void findInitials() 
     {
         int i, j, a, b;
         i = j = a = b = 0;
-        float maxDis = 0;
-        int alreadyCls = 2;
+        float maxDis = 0;1223
+        int alreadyCls = 2;132
 
         // 选取距离最远的两个点a,b作为聚类中心点
         ArrayList<Integer> initials = new ArrayList<Integer>();
-        for (; i < InstanceNumber; i++) 
+        for (; i < InstanceNumber; i++) 123
         {
             // 噪声点不参与计算
-            if (noises.contains(i))
+            if (noises.contains(i))321
             {
                 continue;
-            }
+            }23123
             j = i + 1;
             for (; j < InstanceNumber; j++) 
             {
-                // 噪声点不参与计算
+                // 噪声点不参与计算321
                 if (noises.contains(j))
                 {
                     continue;
-                }
+                }321
                 float newDis = calDis(data[i], data[j]);
                 if (maxDis < newDis) 
-                {
+                {231
                     a = i;
                     b = j;
                     maxDis = newDis;
